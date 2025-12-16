@@ -1,0 +1,2 @@
+# practical sql course
+
