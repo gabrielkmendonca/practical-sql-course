@@ -21,3 +21,15 @@ ORDER BY several columns:
     SELECT * FROM Customers 
     ORDER BY Country ASC, 
     CustomerName DESC;
+
+
+
+SQL AS
+/*
+To give the column a descriptive name, use the AS keyword.
+Syntax:
+
+    SELECT column/function AS custom_name FROM table_name
+*/
+
+    SELECT MIN(Price) AS SmallestPrice FROM Products;
