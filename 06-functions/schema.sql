@@ -22,6 +22,8 @@ Syntax:
     SELECT MIN(column_name)
     FROM table_name
     WHERE condition;
+
+When using MIN(), the returned column will not have a descriptive name.
 */
 
     SELECT MIN(Price)
@@ -37,6 +39,8 @@ Syntax:
     SELECT MAX(column_name)
     FROM table_name
     WHERE condition;
+
+When using MAX(), the returned column will not have a descriptive name.
 */
 
     SELECT MAX(Price)
