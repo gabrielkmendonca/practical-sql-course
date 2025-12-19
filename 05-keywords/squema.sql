@@ -1,3 +1,17 @@
+SQL DISTINCT 
+/*
+The DISTINCT keyword is used to return only distinct (different) values.
+Syntax:
+
+    SELECT DISTINCT column1, column2, ... FROM table_name;
+
+Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values.
+*/ 
+
+    SELECT DISTINCT Country FROM Customers;
+
+
+
 SQL ORDER BY
 /*
 The ORDER BY keyword is used to sort the result-set in ascending or descending order.
@@ -15,7 +29,7 @@ Syntax:
 
 /*
 ORDER BY several columns:
-    - selects all customers from the "Customers" table, sorted ascending by the "Country" and descending by the "CustomerName"
+    - selects all customers from the "Customers" table, sorted ascending by the "Country" and descending by the "CustomerName":
 */
 
     SELECT * FROM Customers 

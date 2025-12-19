@@ -67,3 +67,25 @@ Syntax:
     SELECT CustomerName, ContactName, Address
     FROM Customers
     WHERE Address IS NULL;
+
+
+
+SQL LIKE
+/*
+The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.
+There are two wildcards often used in conjunction with the LIKE operator:
+    ->  The percent sign (%)       ->   represents zero, one, or multiple characters
+    ->  The underscore sign (_)    ->   represents one, single character
+If no wildcard is specified, the phrase has to have an exact match to return a result.
+
+Syntax:
+
+    SELECT column1, column2, ... FROM table_name
+    WHERE columnN LIKE pattern;
+*/
+
+    SELECT * FROM Customers
+    WHERE CustomerName LIKE 'a%'; --customers that starts with the letter "a"
+
+    SELECT * FROM Customers
+    WHERE city LIKE 'L_nd__'; --customers from a city that starts with 'L' followed by one wildcard character, then 'nd' and then two wildcard characters:

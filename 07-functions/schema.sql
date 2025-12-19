@@ -45,3 +45,51 @@ When using MAX(), the returned column will not have a descriptive name.
 
     SELECT MAX(Price)
     FROM Products;
+
+
+
+SQL COUNT()
+/*
+The COUNT() function returns the number of rows that matches a specified criterion.
+Syntax:
+
+    SELECT COUNT(column_name) FROM table_name
+    WHERE condition;
+*/
+
+    SELECT COUNT(ProductID) FROM Products
+    WHERE Price > 20;
+
+/*
+COUNT the total number of rows:
+    -   find the total number of rows in the Products table:
+*/
+
+    SELECT COUNT(*) FROM Products;
+
+
+
+SQL SUM()
+/*
+The SUM() function returns the total sum of a numeric column.
+The parameter inside the SUM() function can also be an expression.
+Syntax:
+
+    SELECT SUM(column_name) FROM table_name
+    WHERE condition;
+*/
+
+    SELECT SUM(Quantity) FROM OrderDetails
+    WHERE ProductId = 11;
+
+
+
+SQL AVG()
+/*
+The AVG() function returns the average value of a numeric column.
+NULL values are ignored.
+Syntax:
+
+    SELECT AVG(column_name) FROM table_name
+    WHERE condition;
+*/
