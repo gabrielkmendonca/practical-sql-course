@@ -20,20 +20,6 @@ Select all columns:
 
 
 
-SQL SELECT DISTINCT 
-/*
-The SELECT DISTINCT statement is used to return only distinct (different) values.
-Syntax:
-
-    SELECT DISTINCT column1, column2, ... FROM table_name;
-
-Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values.
-*/ 
-
-    SELECT DISTINCT Country FROM Customers;
-
-
-
 SQL INSERT INTO
 /*
 The INSERT INTO statement is used to insert new records in a table.
