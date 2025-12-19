@@ -84,8 +84,40 @@ Syntax:
     WHERE columnN LIKE pattern;
 */
 
+--customers that starts with the letter "a":
     SELECT * FROM Customers
-    WHERE CustomerName LIKE 'a%'; --customers that starts with the letter "a"
+    WHERE CustomerName LIKE 'a%'; 
+
+--customers from a city that starts with 'L' followed by one wildcard character, then 'nd' and then two wildcard characters:
+    SELECT * FROM Customers
+    WHERE city LIKE 'L_nd__'; 
+
+
+
+SQL IN
+/*
+The IN operator allows you to specify multiple values in a WHERE clause.
+The IN operator is a shorthand for multiple OR conditions.
+Syntax:
+
+    SELECT column_name(s) FROM table_name
+    WHERE column_name IN (value1, value2, ...);
+*/
 
     SELECT * FROM Customers
-    WHERE city LIKE 'L_nd__'; --customers from a city that starts with 'L' followed by one wildcard character, then 'nd' and then two wildcard characters:
+    WHERE Country IN ('Germany', 'France', 'UK');
+
+
+
+SQL BETWEEN
+/*
+The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.
+The BETWEEN operator is inclusive: begin and end values are included.
+Syntax:
+
+    SELECT column_name(s) FROM table_name
+    WHERE column_name BETWEEN value1 AND value2;
+*/
+
+    SELECT * FROM Products
+    WHERE Price BETWEEN 10 AND 20;

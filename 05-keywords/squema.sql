@@ -40,10 +40,24 @@ ORDER BY several columns:
 
 SQL AS
 /*
-To give the column a descriptive name, use the AS keyword.
+SQL aliases are used to give a table, or a column in a table, a temporary name.
+An alias only exists for the duration of that query.
+An alias is created with the AS keyword.
 Syntax:
 
     SELECT column/function AS custom_name FROM table_name
+
+If you want your alias to contain one or more spaces, surround your alias with square brackets or double quotes.
 */
 
-    SELECT MIN(Price) AS SmallestPrice FROM Products;
+    SELECT MIN(Price) AS "Smallest Price" FROM Products;
+
+
+
+SQL NOT
+/*
+By using the NOT keyword, it returns all records that are NOT any of the values.
+*/
+
+    SELECT * FROM Customers
+    WHERE Country NOT IN ('Germany', 'France', 'UK');
