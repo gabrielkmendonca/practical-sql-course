@@ -54,4 +54,5 @@ For more information, access file 08-joins.
 */
 
     SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate FROM Orders
-    JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+    JOIN Customers 
+    ON Orders.CustomerID=Customers.CustomerID;
