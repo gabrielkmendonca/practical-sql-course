@@ -61,3 +61,10 @@ By using the NOT keyword, it returns all records that are NOT any of the values.
 
     SELECT * FROM Customers
     WHERE Country NOT IN ('Germany', 'France', 'UK');
+
+
+
+SQL JOIN Types
+/*
+In order to learn about the JOIN keywords used with the SQL JOIN clause access file 08-joins.
+*/

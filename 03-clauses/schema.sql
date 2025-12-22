@@ -43,3 +43,15 @@ It is possible to add the WHERE clause for records that match a condition, as we
     SELECT TOP 3 * FROM Customers
     WHERE Country='Germany'
     ORDER BY CustomerName DESC;
+
+
+
+SQL JOIN
+/*
+A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
+
+For more information, access file 08-joins.
+*/
+
+    SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate FROM Orders
+    JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
