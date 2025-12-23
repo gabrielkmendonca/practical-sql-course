@@ -66,5 +66,5 @@ By using the NOT keyword, it returns all records that are NOT any of the values.
 
 SQL JOIN Types
 /*
-In order to learn about the JOIN keywords used with the SQL JOIN clause access file 08-joins.
+In order to learn about the JOIN keywords used with the SQL JOIN clause, access file 08-joins.
 */
