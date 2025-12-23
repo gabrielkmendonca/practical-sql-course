@@ -98,14 +98,46 @@ Syntax:
 
 /*
 DELETE all records:
-    ->  It is possible to delete all rows in a table without deleting the table structure.
+    ->  It is possible to delete all rows in a table without deleting the table structure, just by not specify any condition.
 */
 
     DELETE FROM table_name;
 
 
 
-SQL DROP TABLE statement
+SQL GROUP BY
 /*
------------------------------------------------------------------------------------------------------------------
+The GROUP BY statement groups rows that have the same values into summary rows.
+The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.
+Syntax:
+
+    SELECT column_name(s)
+    FROM table_name
+    WHERE condition
+    GROUP BY column_name(s);
 */
+
+    SELECT COUNT(CustomerID), Country
+    FROM Customers
+    GROUP BY Country;
+
+
+
+SQL SELECT INTO
+/*
+The SELECT INTO statement copies data from one table into a new table.
+Can copy all columns into the new table using *.
+Syntax:
+
+    SELECT column1, column2, column3, ...
+    INTO newtable [IN externaldb]
+    FROM oldtable;
+
+The new table will be created with the column-names and types as defined in the old table. You can create new column names using the AS clause.
+Using JOIN, it is possible to copy data from more than one table in a single request.
+Add a WHERE clause that causes the query to return no data, it is possible to create a new, empty table using the schema of another.
+*/
+
+    SELECT CustomerName, ContactName 
+    INTO CustomersBackup2017
+    FROM Customers;

@@ -53,6 +53,25 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
 For more information, access file 08-joins.
 */
 
-    SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate FROM Orders
+    SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate 
+    FROM Orders
     JOIN Customers 
     ON Orders.CustomerID=Customers.CustomerID;
+
+
+
+SQL HAVING
+/*
+The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.
+Syntax:
+
+    SELECT aggregate_function column_name(s)
+    FROM table_name
+    GROUP BY column_name(s)
+    HAVING condition;
+*/
+
+    SELECT COUNT(CustomerID), Country
+    FROM Customers
+    GROUP BY Country
+    HAVING COUNT(CustomerID) > 5;
