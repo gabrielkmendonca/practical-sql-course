@@ -93,3 +93,28 @@ Syntax:
     SELECT AVG(column_name) FROM table_name
     WHERE condition;
 */
+
+    SELECT AVG(Price)
+    FROM Products
+    WHERE CategoryID = 1;
+
+
+
+SQL COALESCE
+/*
+When running functions with columns that contain NULL values, the result will be NULL. In order to fix that, use NULL functions:
+    -> COALESCE()   ->  function supported on almost all databases, except MS Access
+    -> IFNULL()     ->  used on MySQL
+    -> ISNULL()     ->  used on SQL Server
+    -> IsNULL()     ->  used on MS Access
+    -> NVL()        ->  used on Oracle
+
+COALESCE function lets you return an alternative value if an expression is NULL
+Syntax:
+
+    SELECT column_name1 * (column_name2 + COALESCE(column_name3, 0))
+    FROM table_name;
+*/
+
+    SELECT ProductName, UnitPrice * (UnitsInStock + COALESCE(UnitsOnOrder, 0))
+    FROM Products;
