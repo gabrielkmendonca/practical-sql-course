@@ -141,3 +141,27 @@ Add a WHERE clause that causes the query to return no data, it is possible to cr
     SELECT CustomerName, ContactName 
     INTO CustomersBackup2017
     FROM Customers;
+
+
+
+SQL INSERT INTO SELECT
+/*
+The INSERT INTO SELECT statement copies data from one table and inserts it into another table, as long as the data types match.
+The existing records in the target table are unaffected.
+Syntax:
+
+    -> Copy all columns from one table to another table:
+
+        INSERT INTO table2
+        SELECT * FROM table1;
+
+    -> Copy only some columns from one table into another table:
+
+        INSERT INTO table2 (column1, column2, column3, ...)
+        SELECT column1, column2, column3, ...
+        FROM table1;
+*/
+
+    INSERT INTO Customers (CustomerName, City, Country)
+    SELECT SupplierName, City, Country FROM Suppliers
+    WHERE Country='Germany';
