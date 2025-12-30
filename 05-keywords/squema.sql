@@ -68,3 +68,44 @@ SQL JOIN Types
 /*
 In order to learn about the JOIN keywords used with the SQL JOIN clause, access file 08-joins.
 */
+
+
+
+SQL AUTO INCREMENT
+/*
+Auto-increment allows a unique number to be generated automatically when a new record is inserted into a table.
+Often this is the primary key field that we would like to be created automatically every time a new record is inserted.
+The auto-increment feature has different syntaxes depending on the database.
+*/
+
+--MySQL:
+    CREATE TABLE Persons (
+        Personid int NOT NULL AUTO_INCREMENT,
+        LastName varchar(255) NOT NULL,
+        FirstName varchar(255),
+        Age int,
+        PRIMARY KEY (Personid)
+    );
+
+--SQl Server:
+    CREATE TABLE Persons (
+        Personid int IDENTITY(1,1) PRIMARY KEY,
+        LastName varchar(255) NOT NULL,
+        FirstName varchar(255),
+        Age int
+    );
+
+--MS Access:
+    CREATE TABLE Persons (
+        Personid AUTOINCREMENT PRIMARY KEY,
+        LastName varchar(255) NOT NULL,
+        FirstName varchar(255),
+        Age int
+    );
+
+--Oracle:
+    CREATE SEQUENCE seq_person
+    MINVALUE 1
+    START WITH 1
+    INCREMENT BY 1
+    CACHE 10;
