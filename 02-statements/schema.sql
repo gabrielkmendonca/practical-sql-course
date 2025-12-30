@@ -165,3 +165,40 @@ Syntax:
     INSERT INTO Customers (CustomerName, City, Country)
     SELECT SupplierName, City, Country FROM Suppliers
     WHERE Country='Germany';
+
+
+
+SQL Views
+/*
+A view is a virtual table based on the result-set of an SQL statement.
+A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.
+You can add SQL statements and functions to a view and present the data as if the data were coming from one single table.
+Syntax:
+
+    CREATE VIEW view_name AS
+    SELECT column1, column2, ...
+    FROM table_name
+    WHERE condition;
+
+Query Syntax:
+
+    SELECT column1, column2, ... FROm view_name
+
+A view always shows up-to-date data! The database engine recreates the view, every time a user queries it.
+*/
+
+    CREATE VIEW [Brazil Customers] AS
+    SELECT CustomerName, ContactName
+    FROM Customers
+    WHERE Country = 'Brazil';
+
+    SELECT * FROM [Brazil Customers];
+
+--Update a View:
+    CREATE OR REPLACE VIEW [Brazil Customers] AS
+    SELECT CustomerName, ContactName, City
+    FROM Customers
+    WHERE Country = 'Brazil';
+
+--DROP a View:
+    DROP VIEW [Brazil Customers];
